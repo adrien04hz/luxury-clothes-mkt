@@ -1,8 +1,8 @@
 <div className="w-full h-164 bg-[#222] flex flex-col items-center justify-start p-14 space-y-10">
     
-    {/* Arriba */}
+    <!-- {/* Arriba */} -->
     <div className="flex justify-start w-full">
-        {/* Logo con redes */}
+        <!-- {/* Logo con redes */} -->
         <div className="flex flex-col items-start justify-start gap-7 py-12">
         <div className="w-56">
             <Image
@@ -53,37 +53,25 @@
 
         </div>
 
-        {/* Las columnas */}
+        <!-- {/* Las columnas */} -->
         <div className="max-w-6xl mx-auto grid grid-cols-4 gap-16 px-8">
         <div className="flex flex-col text-white space-y-5">
-            <p className="font-bold">{"PRODUCTOS"}</p>
+            <p className="font-bold">PRODUCTOS</p>
             <ul id="productos" className="flex flex-col space-y-2"></ul>
         </div>
 
         <div className="flex flex-col text-white space-y-5">
-            <p className="font-bold">{"MARCAS"}</p>
-            <ul id="marcas" className="flex flex-col space-y-2">
-            {
-                marcas.data?.map(
-                (marca) => (
-                    <li key={marca.id} className="hover:underline">
-                    <Link href={`#`}>
-                        {marca.nombre}
-                    </Link>
-                    </li>
-                )
-                )
-            }
-            </ul>
+            <p className="font-bold">MARCAS</p>
+            <ul id="marcas" className="flex flex-col space-y-2"></ul>
         </div>
 
         <div className="flex flex-col text-white space-y-5">
-            <p className="font-bold">{"COLORES"}</p>
+            <p className="font-bold">COLORES</p>
             <ul id="colores" className="flex flex-col space-y-2"></ul>
         </div>
 
         <div className="flex flex-col text-white space-y-5">
-            <p className="font-bold">{"ASISTENCIA"}</p>
+            <p className="font-bold">ASISTENCIA</p>
             <ul id="asistencias" className="flex flex-col space-y-2"></ul>
         </div>
         </div>
@@ -92,7 +80,7 @@
 
     <div className="w-full h-px bg-[#D4AF37]"></div>
 
-    {/* Copy y metodos pago */}
+    <!-- {/* Copy y metodos pago */} -->
     <div className="flex justify-between items-center w-full h-full">
         <div className="text-white">
         <p id="copy"></p>

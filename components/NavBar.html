@@ -12,9 +12,9 @@
         <nav className="z-50">
         <ul className="flex justify-center space-x-9 text-sm">
             <li className="text-white group hover:underline" key={12312}>
-            <Link href="#">
-                {"CATEGORÍAS"}
-            </Link>
+            <a href="#">
+                CATEGORÍAS
+            </a>
 
             <div className="
                 fixed left-0 top-28 w-full opacity-0 invisible
@@ -27,13 +27,13 @@
                 {
                     categorias.data?.map( categoria =>
                     <div key={categoria.id}>
-                        <p className="font-semibold mb-3"><Link href="#">{categoria.name.toUpperCase()}</Link></p>
+                        <p className="font-semibold mb-3"><a href="#">{categoria.name.toUpperCase()}</a></p>
                         <ul className="space-y-2 text-gray-600">
                         {
                             categoria.subcategories.map(
                             subcategoria => (
                                 <li key={subcategoria.id} className="hover:underline cursor-pointer">
-                                <Link href="#">{subcategoria.nombre}</Link>
+                                <a href="#">{subcategoria.nombre}</a>
                                 </li>
                             )
                             )
@@ -49,9 +49,9 @@
 
             {generos.data.slice(0, 3)?.map( genero => (
             <li className="text-white group hover:underline" key={genero.id}>
-                <Link href="#">
+                <a href="#">
                 {genero.nombre.toUpperCase()}
-                </Link>
+                </a>
 
                 <div className="
                 fixed left-0 top-28 w-full opacity-0 invisible
@@ -64,13 +64,13 @@
                     {
                     categorias.data?.map( categoria =>
                         <div key={categoria.id}>
-                        <p className="font-semibold mb-3"><Link href="#">{categoria.name.toUpperCase()}</Link></p>
+                        <p className="font-semibold mb-3"><a href="#">{categoria.name.toUpperCase()}</a></p>
                         <ul className="space-y-2 text-gray-600">
                             {
                             categoria.subcategories.map(
                                 subcategoria => (
                                 <li key={subcategoria.id} className="hover:underline cursor-pointer">
-                                    <Link href="#">{subcategoria.nombre}</Link>
+                                    <a href="#">{subcategoria.nombre}</a>
                                 </li>
                                 )
                             )
@@ -101,15 +101,15 @@
     </div>
 
     <div className="flex space-x-5">
-        <Link href="#profile">
+        <a href="#profile">
         <Image src="/assets/images/profile.svg" alt="Cart" width={30} height={30} />
-        </Link>
-        <Link href="#wishlist">
+        </a>
+        <a href="#wishlist">
         <Image src="/assets/images/wish.svg" alt="User" width={30} height={30} />
-        </Link>
-        <Link href="#cart">
+        </a>
+        <a href="#cart">
         <Image src="/assets/images/bag.svg" alt="Heart" width={30} height={30} />
-        </Link>
+        </a>
     </div>
     </div>
 </div>
