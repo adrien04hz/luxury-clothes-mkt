@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "id": 1,
+      "nombre": "Adidas",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/adidas.svg"
+    },
+    {
+      "id": 2,
+      "nombre": "ArcTeryx",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/arcteryx.svg"
+    },
+    {
+      "id": 3,
+      "nombre": "Calvin Klein",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/calvin_klein.svg"
+    },
+    {
+      "id": 4,
+      "nombre": "Hugo Boss",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/hugoBoss.svg"
+    },
+    {
+      "id": 5,
+      "nombre": "Jordan",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/jordan.svg"
+    },
+    {
+      "id": 6,
+      "nombre": "Massimo Dutti",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/massimoDutti.svg"
+    },
+    {
+      "id": 7,
+      "nombre": "New Era",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/newEra.svg"
+    },
+    {
+      "id": 8,
+      "nombre": "Nike",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/nike.svg"
+    },
+    {
+      "id": 9,
+      "nombre": "The North Face",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/NorthFace.svg"
+    },
+    {
+      "id": 10,
+      "nombre": "Tommy Hilfiger",
+      "imagen_url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/MakesLogos/TommyHilfiger.svg"
+    }
+  ]
+}
