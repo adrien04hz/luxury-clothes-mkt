@@ -57,7 +57,7 @@
         <div className="max-w-6xl mx-auto grid grid-cols-4 gap-16 px-8">
         <div className="flex flex-col text-white space-y-5">
             <p className="font-bold">{"PRODUCTOS"}</p>
-            <ul className="flex flex-col space-y-2">
+            <ul id="productos" className="flex flex-col space-y-2">
             {
                 generos.data?.map(
                 (genero) => (
@@ -86,7 +86,7 @@
 
         <div className="flex flex-col text-white space-y-5">
             <p className="font-bold">{"MARCAS"}</p>
-            <ul className="flex flex-col space-y-2">
+            <ul id="marcas" className="flex flex-col space-y-2">
             {
                 marcas.data?.map(
                 (marca) => (
@@ -103,7 +103,7 @@
 
         <div className="flex flex-col text-white space-y-5">
             <p className="font-bold">{"COLORES"}</p>
-            <ul className="flex flex-col space-y-2">
+            <ul id="colores" className="flex flex-col space-y-2">
             {
                 colores.data?.map(
                 (color) => (
@@ -120,7 +120,7 @@
 
         <div className="flex flex-col text-white space-y-5">
             <p className="font-bold">{"ASISTENCIA"}</p>
-            <ul className="flex flex-col space-y-2">
+            <ul id="asistencias" className="flex flex-col space-y-2">
             {
                 asistencias.data?.map(
                 (asistencia) => (

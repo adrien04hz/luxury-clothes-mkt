@@ -1,0 +1,40 @@
+{  
+  "ok": true,
+  "data": [
+    {
+      "id": 1,
+      "nombre": "Visa",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/visa.svg"
+    },
+    {
+      "id": 2,
+      "nombre": "Mastercard",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/mastercard.svg"
+    },
+    {
+      "id": 3,
+      "nombre": "PayPal",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/paypal.svg"
+    },
+    {
+      "id": 4,
+      "nombre": "Google pay",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/google-pay.svg"
+    },
+    {
+      "id": 5,
+      "nombre": "Apple pay",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/apple-pay-white.svg"
+    },
+    {
+      "id": 6,
+      "nombre": "Apple pay",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/apple-pay-black.svg"
+    },
+    {
+      "id": 7,
+      "nombre": "American Express",
+      "url": "https://woryjvsnyyfuhrywvkeq.supabase.co/storage/v1/object/public/LuxuryClothes/ProvidersLogos/american-express.svg"
+    }
+  ]
+}
