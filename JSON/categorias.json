@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Ropa",
+      "subcategories": [
+        {
+          "id": 1,
+          "nombre": "Playera"
+        },
+        {
+          "id": 2,
+          "nombre": "Pantalón"
+        },
+        {
+          "id": 3,
+          "nombre": "Sudadera"
+        },
+        {
+          "id": 4,
+          "nombre": "Chamarra"
+        },
+        {
+          "id": 5,
+          "nombre": "Shorts"
+        },
+        {
+          "id": 6,
+          "nombre": "Jersey"
+        },
+        {
+          "id": 7,
+          "nombre": "Calcetines"
+        },
+        {
+          "id": 8,
+          "nombre": "Camisa"
+        },
+        {
+          "id": 9,
+          "nombre": "Top"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Calzado",
+      "subcategories": [
+        {
+          "id": 10,
+          "nombre": "Tenis"
+        },
+        {
+          "id": 11,
+          "nombre": "Botas"
+        },
+        {
+          "id": 12,
+          "nombre": "Sandalias"
+        },
+        {
+          "id": 13,
+          "nombre": "Tacones"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Accesorios",
+      "subcategories": [
+        {
+          "id": 14,
+          "nombre": "Gorra"
+        },
+        {
+          "id": 15,
+          "nombre": "Mochila"
+        },
+        {
+          "id": 16,
+          "nombre": "Bolso"
+        },
+        {
+          "id": 17,
+          "nombre": "Reloj"
+        },
+        {
+          "id": 18,
+          "nombre": "Lentes"
+        }
+      ]
+    }
+  ]
+}

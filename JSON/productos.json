@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "count": 76,
+  "productos": [
+    {
+      "id": 10,
+      "nombre": "CHAMARRA MECÁNICOS AUDI REVOLUT F1 TEAM CIERRE CORTO",
+      "precio": "1999.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/86ef2ffcb3a74fd8b607829217c35dbe_faec/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM3_hover.tiff.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "PANTS DEPORTIVOS FIREBIRD",
+      "precio": "1499.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/047ea23b8d2c494885cbdc0b0ff87c6f_9366/PANTS_DEPORTIVOS_FIREBIRD_Azul_KD8316_21_model.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "SANDALIAS GAZELLE BOLD",
+      "precio": "1799.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/02a9ab388a2b40b790d88665059f2a19_9366/SANDALIAS_GAZELLE_BOLD_Negro_HQ4688_01_00_standard.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Sandalias Znscape",
+      "precio": "999.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2415a42f59c643479f740a516200adce_9366/Sandalias_Znscape_Beige_JI1857_01_00_standard.jpg"
+    },
+    {
+      "id": 48,
+      "nombre": "Calvin Klein Montura Rectangular",
+      "precio": "1829.00",
+      "marca": "Calvin Klein",
+      "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/616291-600-800/CKJ25619S103-PLANO.jpg?v=639064443391030000"
+    },
+    {
+      "id": 49,
+      "nombre": "Calvin",
+      "precio": "4029.00",
+      "marca": "Calvin Klein",
+      "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/592293-600-800/CK24502S402-1.jpg?v=638968579466570000"
+    }
+  ]
+}

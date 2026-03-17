@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "id": 1,
+      "nombre": "Hombre"
+    },
+    {
+      "id": 2,
+      "nombre": "Mujer"
+    },
+    {
+      "id": 3,
+      "nombre": "Niños"
+    },
+    {
+      "id": 4,
+      "nombre": "Unisex"
+    }
+  ]
+}

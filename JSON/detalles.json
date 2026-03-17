@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "data": {
+    "id": 10,
+    "nombre": "CHAMARRA MECÁNICOS AUDI REVOLUT F1 TEAM CIERRE CORTO",
+    "descripcion": "Una pieza versátil pensada para el uso diario, permitiendo crear combinaciones variadas, perfecto para complementar cualquier conjunto con un toque moderno.",
+    "precio": "1999.00",
+    "color": "Gris",
+    "marca": "Adidas",
+    "imagenes": [
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c286db6ab13e44eb80dee5f82aad9493_9366/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM1.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/86ef2ffcb3a74fd8b607829217c35dbe_faec/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM3_hover.tiff.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1f122176f105458e8171d5aada679715_9366/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM4.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2a5f53a05761497f9737995b3ae22fee_9366/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM6.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce6b284eb1c343a9b0c4908f0d612c74_9366/CHAMARRA_MECANICOS_AUDI_REVOLUT_F1_TEAM_CIERRE_CORTO_Negro_KE8929_HM7.jpg"
+    ],
+    "stock_por_talla": [
+      {
+        "talla": "XS",
+        "stock": 45
+      },
+      {
+        "talla": "S",
+        "stock": 15
+      },
+      {
+        "talla": "M",
+        "stock": 88
+      },
+      {
+        "talla": "L",
+        "stock": 42
+      },
+      {
+        "talla": "XL",
+        "stock": 31
+      },
+      {
+        "talla": "XXL",
+        "stock": 36
+      }
+    ]
+  }
+}
