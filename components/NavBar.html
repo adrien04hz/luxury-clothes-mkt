@@ -1,114 +1,70 @@
-<div className="w-full h-28 bg-black text-white flex justify-between px-12">
-    <div className="flex items-center justify-center">
-    <Image 
+<div class="w-full h-28 bg-black text-white flex justify-between px-12">
+    <div class="flex items-center justify-center">
+    <img 
         src="/assets/logo/main-logo.svg" 
         alt="Logo" 
-        width={174} 
-        height={80} 
+        width="174" 
+        height="80" 
     />
     </div>
-    <div className="py-14">
-    {
-        <nav className="z-50">
-        <ul className="flex justify-center space-x-9 text-sm">
-            <li className="text-white group hover:underline" key={12312}>
+    <div class="py-14">
+    
+        <nav class="z-50">
+        <ul id="principalUL" class="flex justify-center space-x-9 text-sm">
+            <li class="text-white group hover:underline" key={12312}>
             <a href="#">
                 CATEGORÍAS
             </a>
 
-            <div className="
+            <div class="
                 fixed left-0 top-28 w-full opacity-0 invisible
                 group-hover:opacity-100 group-hover:visible
                 transition-all duration-300
                 bg-white text-black shadow-xl py-10
             ">
-                <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8">
-
-                {
-                    categorias.data?.map( categoria =>
-                    <div key={categoria.id}>
-                        <p className="font-semibold mb-3"><a href="#">{categoria.name.toUpperCase()}</a></p>
-                        <ul className="space-y-2 text-gray-600">
-                        {
-                            categoria.subcategories.map(
-                            subcategoria => (
-                                <li key={subcategoria.id} className="hover:underline cursor-pointer">
-                                <a href="#">{subcategoria.nombre}</a>
-                                </li>
-                            )
-                            )
-                        }
-                        </ul>
-                    </div>
-                    )
-                }
-
-                </div>
+                <div id="categoriaNav" class="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8"></div>
             </div>
             </li>
 
-            {generos.data.slice(0, 3)?.map( genero => (
-            <li className="text-white group hover:underline" key={genero.id}>
-                <a href="#">
-                {genero.nombre.toUpperCase()}
-                </a>
-
-                <div className="
-                fixed left-0 top-28 w-full opacity-0 invisible
-                group-hover:opacity-100 group-hover:visible
-                transition-all duration-300
-                bg-white text-black shadow-xl py-10
-                ">
-                <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8">
-
-                    {
-                    categorias.data?.map( categoria =>
-                        <div key={categoria.id}>
-                        <p className="font-semibold mb-3"><a href="#">{categoria.name.toUpperCase()}</a></p>
-                        <ul className="space-y-2 text-gray-600">
-                            {
-                            categoria.subcategories.map(
-                                subcategoria => (
-                                <li key={subcategoria.id} className="hover:underline cursor-pointer">
-                                    <a href="#">{subcategoria.nombre}</a>
-                                </li>
-                                )
-                            )
-                            }
-                        </ul>
-                        </div>
-                    )
-                    }
-
-                </div>
-                </div>
-            </li>
-            ))}
         </ul>
         </nav>
-    }
+    
     </div>
-    <div className="flex space-x-7 items-center">
-    <div className="relative w-48 h-8">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={16} />
+    <div class="flex space-x-7 items-center">
+    <div class="relative w-48 h-8">
+        
+        <!-- Icono lupa -->
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+            <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+        </svg>
+
+        <!-- Input -->
         <input
-        type="text"
-        placeholder="Buscar..."
-        className="w-full h-full pl-11 pr-4 py-3 bg-gray-50 rounded-full
-        focus:outline-none focus:ring-1 focus:ring-black
-        placeholder:text-gray-400 text-black"
+            type="text"
+            placeholder="Buscar..."
+            class="w-full h-full pl-11 pr-4 py-3 bg-gray-50 rounded-full
+            focus:outline-none focus:ring-1 focus:ring-black
+            placeholder-gray-400 text-black"
         />
+
     </div>
 
-    <div className="flex space-x-5">
+    <div class="flex space-x-5">
         <a href="#profile">
-        <Image src="/assets/images/profile.svg" alt="Cart" width={30} height={30} />
+        <img src="/assets/images/profile.svg" alt="Cart" width={30} height={30} />
         </a>
         <a href="#wishlist">
-        <Image src="/assets/images/wish.svg" alt="User" width={30} height={30} />
+        <img src="/assets/images/wish.svg" alt="User" width={30} height={30} />
         </a>
         <a href="#cart">
-        <Image src="/assets/images/bag.svg" alt="Heart" width={30} height={30} />
+        <img src="/assets/images/bag.svg" alt="Heart" width={30} height={30} />
         </a>
     </div>
     </div>
