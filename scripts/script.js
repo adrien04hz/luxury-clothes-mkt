@@ -18,11 +18,11 @@ async function cargarDatos() {
     marcasRes,
     proveedoresRes
   ] = await Promise.all([
-    fetch("../JSON/genero.json"),
-    fetch("../JSON/categorias.json"),
-    fetch("../JSON/colores.json"),
-    fetch("../JSON/marcas.json"),
-    fetch("../JSON/proveedor.json")
+    fetch("./JSON/genero.json"),
+    fetch("./JSON/categorias.json"),
+    fetch("./JSON/colores.json"),
+    fetch("./JSON/marcas.json"),
+    fetch("./JSON/proveedor.json")
   ])
 
 
@@ -33,13 +33,13 @@ async function cargarDatos() {
   const categorias = await categoriasRes.json();
 
   // generar HTML
-  const htmlGeneros = generos.map(genero => `
+  const htmlGeneros = generos.data.map(genero => `
     <li class="hover:underline">
       <a href="#">${genero.nombre}</a>
     </li>
   `).join("");
 
-  const htmlCategorias = categorias.map(categoria => `
+  const htmlCategorias = categorias.data.map(categoria => `
     <li class="hover:underline">
       <a href="#">${categoria.name}</a>
     </li>
@@ -53,7 +53,7 @@ async function cargarDatos() {
   const colores = await coloresRes.json();
 
   const contenedorColores = document.getElementById("colores");
-  const htmlColores = colores.map(color => `
+  const htmlColores = colores.data.map(color => `
     <li class="hover:underline">
       <a href="#">${color.nombre}</a>
     </li>
@@ -64,7 +64,7 @@ async function cargarDatos() {
   const marcas = await marcasRes.json();
   
   const contenedorMarcas = document.getElementById("marcas");
-  const htmlMarcas = marcas.map(marca => `
+  const htmlMarcas = marcas.data.map(marca => `
     <li class="hover:underline">
       <a href="#">${marca.nombre}</a>
     </li>
@@ -89,7 +89,7 @@ async function cargarDatos() {
 
   const proveedores = await proveedoresRes.json()
 
-  const html = proveedores
+  const html = proveedores.data
     .filter(p => p.id !== 5) // 👈 equivalente a tu condición
     .map(proveedor => `
       <div class="flex items-center space-x-4">
@@ -97,7 +97,7 @@ async function cargarDatos() {
           <img
             src="${proveedor.url}"
             alt="${proveedor.nombre}"
-            class="w-12 h-7 object-cover scale-110"
+            class="w-full h-full object-contain"
           />
         </div>
       </div>
@@ -108,20 +108,19 @@ async function cargarDatos() {
 }
 
 // Ejecutar la función para cargar los datos al inicio
-cargarDatos()
 
 // Función para navbar
 async function cargarNavbar() {
   const [generosRes, categoriasRes] = await Promise.all([
-    fetch("../JSON/genero.json"),
-    fetch("../JSON/categorias.json")
+    fetch("./JSON/genero.json"),
+    fetch("./JSON/categorias.json")
   ]);
 
   const contenedor = document.getElementById("categoriaNav")
 
   const categorias = await categoriasRes.json()
 
-  const html = categorias.map(categoria => `
+  const html = categorias.data.map(categoria => `
     <div>
       <p class="font-semibold mb-3">
         <a href="#">${categoria.name.toUpperCase()}</a>
@@ -145,7 +144,7 @@ async function cargarNavbar() {
 
   const generos = await generosRes.json()
 
-  const html2 = generos.slice(0, 3).map(genero => `
+  const html2 = generos.data.slice(0, 3).map(genero => `
     
     <li class="group hover:underline relative">
       <a href="#">${genero.nombre.toUpperCase()}</a>
@@ -160,7 +159,7 @@ async function cargarNavbar() {
       ">
         <div class="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8">
 
-          ${categorias.map(categoria => `
+          ${categorias.data.map(categoria => `
             <div>
               <p class="font-semibold mb-3">
                 <a href="#">${categoria.name.toUpperCase()}</a>
