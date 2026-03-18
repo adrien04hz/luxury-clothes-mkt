@@ -8,7 +8,7 @@ const asistencias = {
     { id: 6, nombre: "Nosotros"},
   ],
 };
-
+s
 
 async function cargarDatos() {
 
