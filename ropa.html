@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,150 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="min-h-screen flex flex-col font-[Montserrat]">
     <div id="navbar"></div>
     <div id="main" class="flex-1">
-        <p>AQUI VAN A PONER LO QUE LES TOQUE</p>
+        <div
+            class="bg-white border-b px-4 py-3 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between text-sm text-gray-600">
+            <div>
+                <span class="text-gray-400">&lt;Ropa&gt; /</span> General
+            </div>
+            <div class="mt-2 md:mt-0">
+                <span class="text-gray-400">&lt;tipo&gt; /</span> &lt;genero&gt; / &lt;subtipo&gt;
+            </div>
+        </div>
+
+        <div class="flex max-w-[1400px] mx-auto">
+
+            <!-- Sidebar filtros – sticky pero respetando navbar -->
+            <aside
+                class="hidden md:block w-72 lg:w-80 shrink-0 bg-white border-r p-5 lg:p-6 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto">
+
+                <!-- Género -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Género</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
+                            <span>Mujer</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
+                            <span>Hombre</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
+                            <span>Niños</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
+                            <span>Unisex</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Color</h3>
+                    <div class="flex flex-wrap gap-2.5 mt-2">
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-black hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-white hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-red-600 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-blue-600 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-2 ring-black bg-yellow-400 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-green-600 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-gray-500 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-purple-600 hover:ring-black transition"></button>
+                        <button
+                            class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-amber-800 hover:ring-black transition"></button>
+                    </div>
+                </div>
+
+                <!-- Ropa -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Ropa</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Playeras</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Pantalones</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Sudaderas</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Chamarras</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Jerseys</span></label>
+                    </div>
+                </div>
+
+                <!-- Marca -->
+                <div class="mb-4">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Marca</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Adidas</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Arc'teryx</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>The
+                                North Face</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Nike</span></label>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Productos – 3 columnas en la mayoría de pantallas -->
+            <main class="flex-1 p-4 md:p-6 lg:p-8">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
+
+                    <!-- Ejemplo de tarjeta (repite 15 veces para tener 5 filas completas) -->
+                    <div
+                        class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+                        <div class="relative aspect-[3/4] bg-gray-100">
+                            <img src="https://images.thenorthface.com/is/image/TheNorthFace/brand/thenorthface-catalog/1954407492_hero?$672x672$"
+                                alt="Parka Summit"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-medium text-gray-900 line-clamp-2 min-h-[2.8rem]">
+                                The North Face Parka de Pluma Summit Himalayan Mujer, Amarillo
+                            </h3>
+                            <p class="mt-2 text-lg font-bold text-black">
+                                $14,990.00
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Puedes copiar y pegar la tarjeta de arriba 14 veces más para completar 5 filas × 3 columnas -->
+
+                </div>
+
+            </main>
+
+        </div>
     </div>
     <div id="footer"></div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>
