@@ -23,7 +23,7 @@
                     <span class="text-gray-400">Accesorios /</span> General
                 </div>
 
-                <div class="mt-6">
+                <div class="mt-2">
                     <span class="text-black">Accesorios
                 </div>
 
@@ -119,35 +119,68 @@
 
             </aside>
 
-            <main class="flex-1 p-4 md:p-6 lg:p-8">
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-
-                    <div
-                        class="bg-white overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-                        <div class="relative aspect-[3/4] bg-gray-100">
-                            <img src="https://images.thenorthface.com/is/image/TheNorthFace/brand/thenorthface-catalog/1954407492_hero?$672x672$"
-                                alt="Parka Summit"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-sm font-medium text-gray-900 line-clamp-2 min-h-[2.8rem]">
-                                The North Face Parka de Pluma Summit Himalayan Mujer, Amarillo
-                            </h3>
-                            <p class="mt-2 text-lg font-bold text-black">
-                                $14,990.00
-                            </p>
-                        </div>
-                    </div>
+             <main class="flex-1 p-4 md:p-5 lg:p-8">
+                <div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7" id="accesorios-grid">
                 </div>
-
             </main>
-
         </div>
     </div>
     <div id="footer"></div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/script.js"></script>
+
+<script>
+    async function cargaraccesorios() {
+    console.log("🔥 Cargando accesorios accesorios...");
+
+    try {
+        const res = await fetch('./JSON/categorias_accesorios.json');
+        const data = await res.json();
+
+        console.log("DATA:", data);
+
+        const accesorios = data.productos || [];
+
+        const grid = document.getElementById('accesorios-grid');
+
+        if (!grid) {
+        console.error("❌ No existe accesorios-grid");
+        return;
+        }
+
+        if (accesorios.length === 0) {
+        grid.innerHTML = `<p class="text-center py-20">No hay accesorios</p>`;
+        return;
+        }
+
+        grid.innerHTML = accesorios.map(p => `
+        <div class="bg-white overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <div class="relative aspect-[3/4] bg-gray-100">
+            <img src="${p.imagen_url}" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+
+            <div class="p-4">
+            <p class="font-bold text-sm text-black">${p.marca}</p>
+            <h3 class="pt-1 text-sm">${p.nombre}</h3>
+            <p class="pt-1 font-bold">$${p.precio}</p>
+            </div>
+
+        </div>
+        `).join("");
+
+    } catch (e) {
+        console.error("❌ ERROR:", e);
+    }
+    }
+    window.addEventListener('load', () => {
+    if (window.location.pathname.includes("accesorios.html")) {
+        cargaraccesorios();
+    }
+    });
+</script>
+
+
 </body>
 
 </html>
