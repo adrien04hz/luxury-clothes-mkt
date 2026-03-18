@@ -193,6 +193,32 @@ async function cargarNavbar() {
   `).join("");
 
   container.insertAdjacentHTML("beforeend", html2);
+
+   const html3 = categoriasData.data.map(categoria => {
+    const page =
+  categoria.name === "Ropa" ? "ropa.html" :
+  categoria.name === "Calzado" ? "calzado.html" :
+  "accesorios.html";
+    return `
+      <div>
+        <p class="font-semibold mb-3">
+          <a href="#">${categoria.name.toUpperCase()}</a>
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          ${categoria.subcategories.map(sub => {
+            const slug = crearSlug(sub.nombre);
+            return `
+              <li class="hover:underline cursor-pointer">
+                <a href="${page}?sub=${slug}">${sub.nombre}</a>
+              </li>
+            `;
+          }).join("")}
+        </ul>
+      </div>
+    `;
+  }).join("");
+
+  contenedor.innerHTML = html3;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
