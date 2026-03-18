@@ -12,106 +12,118 @@
 </head>
 <body class="min-h-screen flex flex-col font-[Montserrat]">
     <div id="navbar"></div>
+    
     <div id="main" class="flex-1">
-        <!-- Breadcrumb (puedes dejarlo o quitarlo) -->
-        <div class="bg-white border-b px-4 py-3 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between text-sm text-gray-600">
-            <div>
-                <span class="text-gray-400">Calzado /</span> General
-            </div>
-            <div class="mt-2 md:mt-0">
-                <span class="text-gray-400">Tipo /</span> Género / Subtipo
+        <div class="bg-white border-b">
+            <div class="max-w-[1800px] mx-auto px-4 py-3 md:px-6 flex flex-col text-sm text-gray-600">
+
+                <div>
+                    <span class="text-gray-400">Accesorios /</span> General
+                </div>
+
+                <div class="mt-2">
+                    <span class="text-black">Accesorios
+                </div>
+
             </div>
         </div>
-    
-        <div class="flex max-w-[1400px] mx-auto">
-            <!-- Sidebar filtros (puedes dejarlo vacío o copiar el de ropa.html) -->
-            <aside class="hidden md:block w-72 lg:w-80 shrink-0 bg-white border-r p-5 lg:p-6 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto">
+        <div class="flex max-w-[1800px] mx-auto">
+
+            <!-- Sidebar filtros – sticky pero respetando navbar -->
+            <aside
+                class="hidden md:block w-72 lg:w-80 shrink-0 bg-white border-r p-5 lg:p-6 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto">
 
                 <!-- Género -->
                 <div class="mb-7">
                     <h3 class="font-semibold text-base mb-3 pb-2 border-b">Género</h3>
                     <div class="space-y-2.5 text-sm">
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
                             <span>Mujer</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
                             <span>Hombre</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
                             <span>Niños</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black">
                             <span>Unisex</span>
                         </label>
                     </div>
                 </div>
-            
+
                 <!-- Color -->
                 <div class="mb-7">
                     <h3 class="font-semibold text-base mb-3 pb-2 border-b">Color</h3>
-                    <div class="flex flex-wrap gap-2.5 mt-2">
-                        <button class="w-7 h-7 rounded-full bg-black ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-white ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-red-600 ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-blue-600 ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-yellow-400 ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-green-600 ring-1 ring-gray-300"></button>
-                        <button class="w-7 h-7 rounded-full bg-gray-500 ring-1 ring-gray-300"></button>
+
+                    <div class="flex justify-center">
+                        <div class="grid grid-cols-3 gap-6 mt-2">
+
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-black hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-white hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-red-600 hover:ring-black transition"></button>
+
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-blue-600 hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-2 ring-black bg-yellow-400 hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-green-600 hover:ring-black transition"></button>
+
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-gray-500 hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-purple-600 hover:ring-black transition"></button>
+                            <button class="w-7 h-7 rounded-full border-2 border-white ring-1 ring-gray-300 bg-amber-800 hover:ring-black transition"></button>
+
+                        </div>
                     </div>
                 </div>
-            
-                <!-- Tipo de Calzado (adaptado) -->
+                <!-- Ropa -->
                 <div class="mb-7">
-                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Calzado</h3>
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Accesorios</h3>
                     <div class="space-y-2.5 text-sm">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Tenis</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Botas</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Sandalias</span>
-                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Gorra</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Mochila</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Bolso</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Reloj</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Lentes</span></label>
                     </div>
                 </div>
-            
+
                 <!-- Marca -->
                 <div class="mb-4">
                     <h3 class="font-semibold text-base mb-3 pb-2 border-b">Marca</h3>
                     <div class="space-y-2.5 text-sm">
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Nike</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Adidas</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
-                            <span>Puma</span>
-                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Adidas</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Arc'teryx</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>The
+                                North Face</span></label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-black focus:ring-black accent-black"><span>Nike</span></label>
                     </div>
                 </div>
-            
+
             </aside>
-    
-            <!-- Grid de productos -->
-            <main class="flex-1 p-4 md:p-6 lg:p-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7" id="productos-grid">
-                    <!-- Aquí el filtro va a poner las tarjetas automáticamente -->
+
+             <main class="flex-1 p-4 md:p-5 lg:p-8">
+                <div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7" id="calzado-grid">
                 </div>
             </main>
         </div>
     </div>
+
     <div id="footer"></div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/script.js"></script>
@@ -135,13 +147,13 @@
         
             console.log(`✅ Encontrados ${filtered.length} productos`);
         
-            let grid = document.getElementById('productos-grid');
+            let grid = document.getElementById('calzado-grid');
         
             // Si por alguna razón no existe el grid, lo crea automáticamente
             if (!grid) {
               const mainContainer = document.querySelector('#main');
               grid = document.createElement('div');
-              grid.id = 'productos-grid';
+              grid.id = 'calzado-grid';
               grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 p-8';
               mainContainer.appendChild(grid);
             }
@@ -152,15 +164,19 @@
             }
         
             grid.innerHTML = filtered.map(p => `
-              <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-white overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <div class="relative aspect-[3/4] bg-gray-100">
-                  <img src="${p.imagen_url}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition">
+                <img src="${p.imagen_url}" 
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+
                 <div class="p-4">
-                  <h3 class="text-sm font-medium text-gray-900 line-clamp-2">${p.nombre}</h3>
-                  <p class="mt-2 text-lg font-bold">$${parseFloat(p.precio).toLocaleString('es-MX')}</p>
+                <p class="font-bold text-sm text-black">${p.marca}</p>
+                <h3 class="pt-1 text-sm">${p.nombre}</h3>
+                <p class="pt-1 font-bold">$${p.precio}</p>
                 </div>
-              </div>
+
+            </div>
             `).join('');
         
           } catch (e) {

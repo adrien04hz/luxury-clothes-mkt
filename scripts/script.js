@@ -170,7 +170,7 @@ async function cargarNavbar() {
       ">
         <div class="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8">
           ${categoriasData.data.map(categoria => {
-            const page = categoria.name === "Ropa" ? "ropa.html" : "calzado.html";
+            const page = categoria.name === "Ropa" ? "ropa.html" : categoria.name === "Calzado" ? "calzado.html" : "accesorios.html";
             return `
               <div>
                 <p class="font-semibold mb-3"><a href="#">${categoria.name.toUpperCase()}</a></p>
