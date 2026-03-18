@@ -13,10 +13,87 @@
 <body class="min-h-screen flex flex-col font-[Montserrat]">
     <div id="navbar"></div>
     <div id="main" class="flex-1">
-        <p>AQUI VAN A PONER LO QUE LES TOQUE</p>
+        <!-- Breadcrumb (puedes dejarlo o quitarlo) -->
+        <div class="bg-white border-b px-4 py-3 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between text-sm text-gray-600">
+            <div>
+                <span class="text-gray-400">&lt;Calzado&gt; /</span> General
+            </div>
+            <div class="mt-2 md:mt-0">
+                <span class="text-gray-400">&lt;tipo&gt; /</span> &lt;genero&gt; / &lt;subtipo&gt;
+            </div>
+        </div>
+    
+        <div class="flex max-w-[1400px] mx-auto">
+            <!-- Sidebar filtros (puedes dejarlo vacío o copiar el de ropa.html) -->
+            <aside class="hidden md:block w-72 lg:w-80 shrink-0 bg-white border-r p-5 lg:p-6 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto">
+                <!-- Aquí puedes pegar el sidebar de ropa.html si quieres -->
+            </aside>
+    
+            <!-- Grid de productos -->
+            <main class="flex-1 p-4 md:p-6 lg:p-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7" id="productos-grid">
+                    <!-- Aquí el filtro va a poner las tarjetas automáticamente -->
+                </div>
+            </main>
+        </div>
     </div>
     <div id="footer"></div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/script.js"></script>
+    <script>
+        // FILTRO ULTRA ROBUSTO - versión final
+        async function filtrarProductosDesdeNavbar() {
+          const sub = new URLSearchParams(window.location.search).get('sub');
+          if (!sub || !window.location.pathname.includes('calzado.html')) return;
+        
+          console.log("🔍 Buscando productos para:", sub);
+        
+          try {
+            const res = await fetch('./JSON/productos.json');
+            const data = await res.json();
+            const productos = data.productos || data.data || [];
+        
+            // Filtro mejorado (funciona con "Sandalias", "sandalias", "SANDALIAS")
+            const filtered = productos.filter(p => 
+              (p.nombre || "").toLowerCase().includes(sub.toLowerCase())
+            );
+        
+            console.log(`✅ Encontrados ${filtered.length} productos`);
+        
+            let grid = document.getElementById('productos-grid');
+        
+            // Si por alguna razón no existe el grid, lo crea automáticamente
+            if (!grid) {
+              const mainContainer = document.querySelector('#main');
+              grid = document.createElement('div');
+              grid.id = 'productos-grid';
+              grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 p-8';
+              mainContainer.appendChild(grid);
+            }
+        
+            if (filtered.length === 0) {
+              grid.innerHTML = `<p class="col-span-full text-center py-20 text-xl">No hay productos para "${sub}"</p>`;
+              return;
+            }
+        
+            grid.innerHTML = filtered.map(p => `
+              <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+                <div class="relative aspect-[3/4] bg-gray-100">
+                  <img src="${p.imagen_url}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition">
+                </div>
+                <div class="p-4">
+                  <h3 class="text-sm font-medium text-gray-900 line-clamp-2">${p.nombre}</h3>
+                  <p class="mt-2 text-lg font-bold">$${parseFloat(p.precio).toLocaleString('es-MX')}</p>
+                </div>
+              </div>
+            `).join('');
+        
+          } catch (e) {
+            console.error("❌ Error:", e);
+          }
+        }
+        
+        window.addEventListener('load', filtrarProductosDesdeNavbar);
+        </script>
 </body>
 </html>
