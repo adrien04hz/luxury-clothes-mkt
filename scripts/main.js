@@ -11,6 +11,8 @@ async function init() {
 
   await loadComponent("footer", "./components/Footer.html");
   cargarDatos();
+
+  await loadComponent("carrusel", "./components/Carrusel.html");
 }
 
 init();
