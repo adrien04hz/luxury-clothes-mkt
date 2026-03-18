@@ -43,6 +43,48 @@
       "precio": "4029.00",
       "marca": "Calvin Klein",
       "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/592293-600-800/CK24502S402-1.jpg?v=638968579466570000"
+    },
+    {
+      "id": 68,
+      "nombre": "Air Jordan 1 Low Tenis",
+      "precio": "2899.00",
+      "marca": "Jordan",
+      "imagen_url": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/c5861ce4-7e91-4eed-a819-2c5e5eaa1ad3/WMNS+AIR+JORDAN+1+LOW.png"
+    },
+    {
+      "id": 69,
+      "nombre": "Air Jordan 1 Brooklyn Botas",
+      "precio": "3999.00",
+      "marca": "Jordan",
+      "imagen_url": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b0a88f98-49f4-4cad-a742-c7c5bbda9ad1/WMNS+AIR+JORDAN+1+BROOKLYN.png"
+    },
+    {
+      "id": 70,
+      "nombre": "Jordan 1 Low Alt SE Tenis",
+      "precio": "1549.00",
+      "marca": "Jordan",
+      "imagen_url": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f66dadd6-70ad-434d-bdd2-17895f66a42b/JORDAN+1+LOW+ALT+SE+%28TD%29.png"
+    },
+    {
+      "id": 71,
+      "nombre": "Jordan NOLA Sandalias",
+      "precio": "1099.00",
+      "marca": "Jordan",
+      "imagen_url": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/537f0ebe-d4e1-4652-b1e7-a6282c97a8fb/WMNS+JORDAN+NOLA+SLIDE.png"
+    },
+    {
+      "id": 76,
+      "nombre": "Zapato tacones destalonado",
+      "precio": "2995.00",
+      "marca": "Massimo Dutti",
+      "imagen_url": "https://static.massimodutti.net/assets/public/774b/0830/0a6e49cf86c4/51ef26ae9182/11407750719-o1/11407750719-o1.jpg?ts=1767789577737&w=undefined&f=auto"
+    },
+    {
+      "id": 77,
+      "nombre": "Bailarina tacones",
+      "precio": "2995.00",
+      "marca": "Massimo Dutti",
+      "imagen_url": "https://static.massimodutti.net/assets/public/3e31/ce56/c2c6438abe3d/e9d9aa52ad1c/11433750800-o1/11433750800-o1.jpg?ts=1768555182037&w=undefined&f=auto"
     }
   ]
 }
