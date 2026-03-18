@@ -209,7 +209,7 @@ async function cargarNavbar() {
             const slug = crearSlug(sub.nombre);
             return `
               <li class="hover:underline cursor-pointer">
-                <a href="${page}?sub=${slug}">${sub.nombre}</a>
+                <a href="./${page}?sub=${slug}">${sub.nombre}</a>
               </li>
             `;
           }).join("")}
