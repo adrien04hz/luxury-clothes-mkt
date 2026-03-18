@@ -133,8 +133,8 @@
   font-size: 60px;
   letter-spacing: 4px;
   font-weight: 300;
+    cursor: pointer;
 }
-
 
 /* --- Historia con imagen y texto --- */
 .historia-section {
@@ -293,6 +293,7 @@
   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   url("../assets/images/agilidad.png");
 }
+
 
 /* Responsive */
 @media (max-width:768px){
