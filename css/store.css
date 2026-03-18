@@ -1,0 +1,204 @@
+/* --- VARIABLES --- */
+:root {
+    --gold: #d4af37;
+    --black: #050505;
+    --near-black: #111;
+    --white: #ffffff;
+    --gray: #888;
+    --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- BASE --- */
+* { margin:0; padding:0; box-sizing: border-box; }
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background: var(--white); 
+    color: var(--black);
+    overflow-x: hidden;
+}
+.cinzel { font-family: 'Cinzel', serif; letter-spacing: 3px; }
+
+/* --- HEADER --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--black);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo CSS */
+.logo { display: flex; align-items: center; gap: 10px; }
+.l-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+    border: 1px solid var(--gold);
+    padding: 0 10px;
+    color: var(--gold);
+}
+.logo-text h1 { font-size: 18px; letter-spacing: 4px; line-height: 1; }
+.logo-text p { font-size: 9px; letter-spacing: 2px; color: var(--gray); }
+
+.nav-center a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 11px;
+    margin: 0 15px;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.nav-center a:hover { color: var(--gold); }
+
+/* Botones Superiores */
+.user-actions { display: flex; align-items: center; gap: 20px; }
+.btn-text { font-size: 11px; cursor: pointer; transition: 0.3s; }
+.btn-text:hover { color: var(--gold); }
+.btn-gold { 
+    background: var(--gold); 
+    color: var(--black); 
+    padding: 10px 20px; 
+    font-size: 11px; 
+    font-weight: 600; 
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+/* --- HERO --- */
+.hero {
+    height: 70vh;
+    background: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-overlay {
+    text-align: center;
+    color: var(--white);
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    backdrop-filter: blur(5px);
+}
+.hero h2 { font-size: 40px; margin-bottom: 10px; }
+
+/* --- CATALOGO --- */
+.catalog { padding: 80px 5%; }
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+/* Card Multimarca */
+.card { cursor: pointer; }
+.card-img {
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+.card-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: var(--transition);
+    filter: grayscale(20%);
+}
+.quick-buy {
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    transition: var(--transition);
+}
+.card:hover .quick-buy { bottom: 0; }
+.card:hover img { transform: scale(1.08); filter: grayscale(0); }
+
+.card-desc { padding: 20px 0; text-align: center; }
+.brand { font-size: 10px; color: var(--gold); font-weight: 600; display: block; margin-bottom: 5px; }
+.card-desc h4 { font-weight: 300; font-size: 15px; margin-bottom: 5px; }
+.card-desc p { font-weight: 600; font-size: 14px; }
+
+/* --- MODALES (CSS HACK) --- */
+.state-toggle { display: none; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-box {
+    background: var(--white);
+    padding: 60px;
+    width: 450px;
+    position: relative;
+    text-align: center;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-x {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--gray);
+}
+
+/* Lógica del Checkbox Hack */
+#modal-login:checked ~ .login-overlay { display: flex; }
+#modal-register:checked ~ .register-overlay { display: flex; }
+
+/* Estilos de Formulario */
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    font-family: 'Montserrat';
+    outline: none;
+}
+input:focus { border-color: var(--gold); }
+.full-gold {
+    width: 100%;
+    padding: 15px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.full-gold:hover { background: var(--gold); color: var(--black); }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-center { display: none; }
+    .hero h2 { font-size: 28px; }
+    .modal-box { width: 90%; padding: 30px; }
+}

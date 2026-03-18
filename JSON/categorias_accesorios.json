@@ -1,0 +1,125 @@
+{
+  "ok": true,
+  "count": 17,
+  "productos": [
+    {
+      "id": 22,
+      "nombre": "GORRA DE BÉISBOL DEL EQUIPO AUDI REVOLUT F1",
+      "precio": "899.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c80ce65cc9884e89a94a2f7f9629796c_9366/GORRA_DE_BEISBOL_DEL_EQUIPO_AUDI_REVOLUT_F1_Gris_KF0713_01_00_standard.jpg"
+    },
+    {
+      "id": 23,
+      "nombre": "Bolsa Tote adidas by Stella McCartney",
+      "precio": "3399.00",
+      "marca": "Adidas",
+      "imagen_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6e7e224d819448a4a4753a946aad528b_9366/Bolsa_Tote_adidas_by_Stella_McCartney_Cafe_KC4219_01_00_standard.jpg"
+    },
+    {
+      "id": 29,
+      "nombre": "Gorro Bird Word",
+      "precio": "60.00",
+      "marca": "ArcTeryx",
+      "imagen_url": "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000010065-Bird-Word-Toque-24K-Black-Front-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0"
+    },
+    {
+      "id": 30,
+      "nombre": "Bolso bandolera Heliad",
+      "precio": "50.00",
+      "marca": "ArcTeryx",
+      "imagen_url": "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000010359-Heliad-Crossbody-Mantis-Front-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0"
+    },
+    {
+      "id": 48,
+      "nombre": "Calvin Klein Montura Rectangular",
+      "precio": "1829.00",
+      "marca": "Calvin Klein",
+      "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/616291-600-800/CKJ25619S103-PLANO.jpg?v=639064443391030000"
+    },
+    {
+      "id": 49,
+      "nombre": "Calvin",
+      "precio": "4029.00",
+      "marca": "Calvin Klein",
+      "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/592293-600-800/CK24502S402-1.jpg?v=638968579466570000"
+    },
+    {
+      "id": 50,
+      "nombre": "Hat Bouclé Calvin Klein",
+      "precio": "1099.00",
+      "marca": "Calvin Klein",
+      "imagen_url": "https://calvinkleinmx.vteximg.com.br/arquivos/ids/582447-600-800/4F5055G250-PLANO.jpg?v=638937347399670000"
+    },
+    {
+      "id": 84,
+      "nombre": "Bolso de viaje piel ante",
+      "precio": "9995.00",
+      "marca": "Massimo Dutti",
+      "imagen_url": "https://static.massimodutti.net/assets/public/1a44/2d86/d3a64dd5a84e/8bc6da9eeda6/02552315700-o1/02552315700-o1.jpg?ts=1764761525122&w=undefined&f=auto"
+    },
+    {
+      "id": 85,
+      "nombre": "Gafas de sol metálicas cuadradas",
+      "precio": "1995.00",
+      "marca": "Massimo Dutti",
+      "imagen_url": "https://static.massimodutti.net/assets/public/6d4a/1dbc/e5534b28abc0/c83078c5fecb/02500300808-o1/02500300808-o1.jpg?ts=1761568624877&w=undefined&f=auto"
+    },
+    {
+      "id": 88,
+      "nombre": "Oracle Red Bull Racing Team 9SEVENTY Snapback",
+      "precio": "1299.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60669223_9SEVENTY_REDBULLTEAMLINE_RBULLF1_NAV_3QL_2048x.jpg?v=1739383201"
+    },
+    {
+      "id": 89,
+      "nombre": "McLaren Formula 1 Team 59FIFTY Cerrada",
+      "precio": "1599.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60669289_59FIFTY_MCLAREN_ECOM_MCLAREN_ORG_3QL_2048x.jpg?v=1740431408"
+    },
+    {
+      "id": 90,
+      "nombre": "BWT Alpine F1 Team Pierre Gasly Silverstone Race Special 2025 9SEVENTY Snapback",
+      "precio": "1499.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60669363_9SEVENTY_ALPINE_25_SILVERSTONE_ALPINE_MULTI_3QL_2048x.jpg?v=1743394385"
+    },
+    {
+      "id": 91,
+      "nombre": "BWT Alpine F1 Team Japan Race Special 2025 9SEVENTY Snapback",
+      "precio": "1499.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60669369_9SEVENTYSS_ALPINE_GRY_3QL_2048x.jpg?v=1743394339"
+    },
+    {
+      "id": 92,
+      "nombre": "Visa Cash App Racing Bulls Yuki Tsunoda Knit",
+      "precio": "999.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60667351_KNIT_RACING_REDBULL_BL_F_2048x.jpg?v=1741716119"
+    },
+    {
+      "id": 93,
+      "nombre": "Oracle Red Bull Racing Team Knit para Niña o Niño",
+      "precio": "999.00",
+      "marca": "New Era",
+      "imagen_url": "https://www.newera.mx/cdn/shop/files/60669235_KNIT_F1TEAM_REDBULL_NVY_F_2048x.png?v=1741625881"
+    },
+    {
+      "id": 114,
+      "nombre": "Gorra Mudder Trucker",
+      "precio": "483.00",
+      "marca": "The North Face",
+      "imagen_url": "https://thenorthfacemx.vtexassets.com/arquivos/ids/1548501/NF0A5FXADOU_1.jpg?v=638957101979570000"
+    },
+    {
+      "id": 115,
+      "nombre": "Gorra 66 Classic Unisex",
+      "precio": "520.00",
+      "marca": "The North Face",
+      "imagen_url": "https://thenorthfacemx.vtexassets.com/arquivos/ids/1548431/NF0A4VSVBTR_1.jpg?v=638957100913800000"
+    }
+  ]
+}
