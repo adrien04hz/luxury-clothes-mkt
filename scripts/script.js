@@ -5,6 +5,7 @@ const asistencias = {
     { id: 3, nombre: "Pedidos" },
     { id: 4, nombre: "Métodos de pago" },
     { id: 5, nombre: "Envíos" },
+    { id: 6, nombre: "Nosotros"},
   ],
 };
 
