@@ -5,10 +5,9 @@ const asistencias = {
     { id: 3, nombre: "Pedidos" },
     { id: 4, nombre: "Métodos de pago" },
     { id: 5, nombre: "Envíos" },
-    { id: 6, nombre: "Nosotros"},
+    { id: 6, nombre: "Nosotros", url: "acercade.html"},
   ],
 };
-s
 
 async function cargarDatos() {
 
@@ -76,7 +75,7 @@ async function cargarDatos() {
   const contenedorAsistencias = document.getElementById("asistencias");
   const htmlAsistencias = asistencias.data.map(asistencia => `
     <li class="hover:underline">
-      <a href="#">${asistencia.nombre}</a>
+      <a href="${asistencia.url}">${asistencia.nombre}</a>
     </li>
   `).join("");
   contenedorAsistencias.innerHTML = htmlAsistencias;
@@ -195,3 +194,13 @@ async function cargarNavbar() {
 
   container.insertAdjacentHTML("beforeend", html2);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const titulo = document.getElementById("titulohistoria");
+
+  if (titulo) {
+    titulo.addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  }
+});
