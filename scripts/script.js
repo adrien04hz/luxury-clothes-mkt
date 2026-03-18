@@ -108,80 +108,90 @@ async function cargarDatos() {
   contenedorProveedor.innerHTML = html
 }
 
-// Ejecutar la función para cargar los datos al inicio
+// Función auxiliar para crear URL amigable
+function crearSlug(texto) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
 
-// Función para navbar
+// Función para navbar (con z-index corregido)
 async function cargarNavbar() {
   const [generosRes, categoriasRes] = await Promise.all([
     fetch("./JSON/genero.json"),
     fetch("./JSON/categorias.json")
   ]);
 
-  const contenedor = document.getElementById("categoriaNav")
+  const contenedor = document.getElementById("categoriaNav");
+  const categoriasData = await categoriasRes.json();
 
-  const categorias = await categoriasRes.json()
+  // Dropdown de "CATEGORÍAS"
+  const html = categoriasData.data.map(categoria => {
+    const page = categoria.name === "Ropa" ? "ropa.html" : "calzado.html";
+    return `
+      <div>
+        <p class="font-semibold mb-3">
+          <a href="#">${categoria.name.toUpperCase()}</a>
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          ${categoria.subcategories.map(sub => {
+            const slug = crearSlug(sub.nombre);
+            return `
+              <li class="hover:underline cursor-pointer">
+                <a href="${page}?sub=${slug}">${sub.nombre}</a>
+              </li>
+            `;
+          }).join("")}
+        </ul>
+      </div>
+    `;
+  }).join("");
 
-  const html = categorias.data.map(categoria => `
-    <div>
-      <p class="font-semibold mb-3">
-        <a href="#">${categoria.name.toUpperCase()}</a>
-      </p>
+  contenedor.innerHTML = html;
 
-      <ul class="space-y-2 text-gray-600">
-        ${categoria.subcategories.map(sub => `
-          <li class="hover:underline cursor-pointer">
-            <a href="#">${sub.nombre}</a>
-          </li>
-        `).join("")}
-      </ul>
-    </div>
-  `).join("")
-
-  contenedor.innerHTML = html
-
-
-  // Contenedor de la UL principal del navbar
   const container = document.getElementById("principalUL");
-
-  const generos = await generosRes.json()
+  const generos = await generosRes.json();
 
   const html2 = generos.data.slice(0, 3).map(genero => `
-    
     <li class="group hover:underline relative">
       <a href="#">${genero.nombre.toUpperCase()}</a>
-
-      <!-- Mega menú -->
+      
+      <!-- MEGA MENÚ CON z-[999] para que siempre esté arriba -->
       <div class="
         fixed left-0 top-28 w-full
         opacity-0 invisible
         group-hover:opacity-100 group-hover:visible
         transition-all duration-300
         bg-white text-black shadow-xl py-10
+        z-[999]               
       ">
         <div class="max-w-6xl mx-auto grid grid-cols-3 gap-8 px-8">
-
-          ${categorias.data.map(categoria => `
-            <div>
-              <p class="font-semibold mb-3">
-                <a href="#">${categoria.name.toUpperCase()}</a>
-              </p>
-
-              <ul class="space-y-2 text-gray-600">
-                ${categoria.subcategories.map(sub => `
-                  <li class="hover:underline cursor-pointer">
-                    <a href="#">${sub.nombre}</a>
-                  </li>
-                `).join("")}
-              </ul>
-            </div>
-          `).join("")}
-
+          ${categoriasData.data.map(categoria => {
+            const page = categoria.name === "Ropa" ? "ropa.html" : "calzado.html";
+            return `
+              <div>
+                <p class="font-semibold mb-3"><a href="#">${categoria.name.toUpperCase()}</a></p>
+                <ul class="space-y-2 text-gray-600">
+                  ${categoria.subcategories.map(sub => {
+                    const slug = crearSlug(sub.nombre);
+                    return `
+                      <li class="hover:underline cursor-pointer">
+                        <a href="${page}?sub=${slug}">${sub.nombre}</a>
+                      </li>
+                    `;
+                  }).join("")}
+                </ul>
+              </div>
+            `;
+          }).join("")}
         </div>
       </div>
-
     </li>
+  `).join("");
 
-  `).join("")
-  
   container.insertAdjacentHTML("beforeend", html2);
 }
