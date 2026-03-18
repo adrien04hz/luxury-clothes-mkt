@@ -26,7 +26,82 @@
         <div class="flex max-w-[1400px] mx-auto">
             <!-- Sidebar filtros (puedes dejarlo vacío o copiar el de ropa.html) -->
             <aside class="hidden md:block w-72 lg:w-80 shrink-0 bg-white border-r p-5 lg:p-6 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto">
-                <!-- Aquí puedes pegar el sidebar de ropa.html si quieres -->
+
+                <!-- Género -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Género</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Mujer</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Hombre</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Niños</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Unisex</span>
+                        </label>
+                    </div>
+                </div>
+            
+                <!-- Color -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Color</h3>
+                    <div class="flex flex-wrap gap-2.5 mt-2">
+                        <button class="w-7 h-7 rounded-full bg-black ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-white ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-red-600 ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-blue-600 ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-yellow-400 ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-green-600 ring-1 ring-gray-300"></button>
+                        <button class="w-7 h-7 rounded-full bg-gray-500 ring-1 ring-gray-300"></button>
+                    </div>
+                </div>
+            
+                <!-- Tipo de Calzado (adaptado) -->
+                <div class="mb-7">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Calzado</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Tenis</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Botas</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Sandalias</span>
+                        </label>
+                    </div>
+                </div>
+            
+                <!-- Marca -->
+                <div class="mb-4">
+                    <h3 class="font-semibold text-base mb-3 pb-2 border-b">Marca</h3>
+                    <div class="space-y-2.5 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Nike</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Adidas</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-black accent-black">
+                            <span>Puma</span>
+                        </label>
+                    </div>
+                </div>
+            
             </aside>
     
             <!-- Grid de productos -->
