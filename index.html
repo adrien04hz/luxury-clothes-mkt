@@ -35,7 +35,37 @@
             <div class="">
                 <p class="text-[32px]">Marcas que cautivan</p>
             </div>
-            <div class="px-[120px] w-full grid grid-cols-5 sm:grid-cols-2 lg:grid-cols-5 gap-5 justify-items-center" id="marcas-grid"></div>
+            <div class="px-[120px] w-full grid grid-cols-5 sm:grid-cols-2 lg:grid-cols-5 gap-2 justify-items-center" id="marcas-grid"></div>
+        </div>
+
+        <div class="flex flex-col p-[100px] space-y-[24px]">
+            <div class="flex justify-between items-center space-x-[24px]">
+                <div class="flex justify-center items-start space-x-[8px]">
+                    <div class="border border-black bg-white text-lg flex justify-center items-center p-2">
+                        <p>Calzado</p>
+                    </div>
+                    <div class="border border-black bg-white text-lg flex justify-center items-center p-2">
+                        <p>Ropa</p>
+                    </div>
+                    <div class="border border-black bg-black text-white text-lg flex justify-center items-center p-2">
+                        <p>Accesorios</p>
+                    </div>
+                    <div class="border border-black bg-white text-lg flex justify-center items-center p-2">
+                        <p>Relojes</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center space-x-[16px]">
+                    <p class="underline"><a href="#">Ver todo</a></p>
+                    <div class="rounded-full h-[30px] w-[30px] bg-[#333] top-[50%] left-[50px] flex items-center justify-center opacity-70">
+                        <img src="./assets/images/arrow.png" alt="Previous" class="rotate-90 h-1/2">
+                    </div>
+
+                    <div class="rounded-full h-[30px] w-[30px] bg-[#333] top-[50%] right-[50px] flex items-center justify-center opacity-70">
+                        <img src="./assets/images/arrow.png" alt="Next" class="rotate-[-90deg] h-1/2">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7" id="destacados2-grid"></div>
         </div>
     </div>
     <div id="footer"></div>
@@ -123,10 +153,55 @@
             }
         }
 
+        async function cargarDestacados2() {
+            console.log("🔥 Cargando destacados...");
+
+            try {
+                const DestacadosRes = await fetch('./JSON/categorias_accesorios.json');
+                const DestacadosData = await DestacadosRes.json();
+
+                console.log("DestacadosData:", DestacadosData);
+
+                const destacados = DestacadosData.productos || [];
+
+                const DestacadosGrid = document.getElementById('destacados2-grid');
+
+                if (!DestacadosGrid) {
+                console.error("❌ No existe destacados2-grid");
+                return;
+                }
+
+                if (destacados.length === 0) {
+                DestacadosGrid.innerHTML = `<p class="text-center py-20">No hay productos destacados</p>`;
+                return;
+                }
+
+                DestacadosGrid.innerHTML = destacados.slice(0,3).map(p => `
+                <div class="bg-white overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div class="relative aspect-[3/4] bg-gray-100">
+                    <img src="${p.imagen_url}" 
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+
+                    <div class="p-4">
+                    <p class="font-bold text-sm text-black">${p.marca}</p>
+                    <h3 class="pt-1 text-sm">${p.nombre}</h3>
+                    <p class="pt-1 font-bold">$${p.precio}</p>
+                    </div>
+
+                </div>
+                `).join("");
+
+            } catch (e) {
+                console.error("❌ ERROR:", e);
+            }
+        }
+
         window.addEventListener('load', () => {
             if (window.location.pathname.includes("index.html")) {
                 cargarDestacados();
                 cargarMarca();
+                cargarDestacados2();
             }
         });
     </script>
